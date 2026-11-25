@@ -1,0 +1,20 @@
+diff --git a/dm/host/front_mac.m b/dm/host/front_mac.m
+index d4eea7e9..4bc5e21b 100644
+--- a/dm/host/front_mac.m
++++ b/dm/host/front_mac.m
+@@ -822,6 +822,7 @@ int front_ctrl_support(int min, int max) {
+     dispatch_semaphore_wait(done, DISPATCH_TIME_FOREVER);
+     return g_cp_ok;
+ }
++#include "ext_pad_mac.h"   // DM_EXT_PAD: a controller state from another process over localhost UDP
+ static void pads_start(void) {
+     const char *e = getenv("DM_PAD_MERGE"); g_merge = e && atoi(e);
+     e = getenv("DM_KBD_PLAYER"); g_kbd_own = !g_merge && e && !strcmp(e, "own");
+@@ -838,6 +839,7 @@ static void pads_start(void) {
+     dm_jc1_start(g_merge);
+     hidpad_start();
+     gippad_start();
++    extpad_start();
+     static const dm_switch2_front s2front = {s2pad_attach, s2pad_detach, s2pad_read, s2pad_player, s2pad_blocked};
+     dm_switch2_start(&s2front);
+ }

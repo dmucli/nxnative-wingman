@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324c"/><stop offset="1" stop-color="#0b0e15"/></linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#ffb347" stop-opacity=".45"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd18a"/><stop offset="1" stop-color="#ff9a1f"/></linearGradient>
+  </defs>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#glow)"/>
+  <rect x="101.5" y="101.5" width="821" height="821" rx="184" fill="none" stroke="#fff" stroke-opacity=".13" stroke-width="3"/>
+  <path d="M512 230 L585 520 L790 690 L770 735 L560 640 L512 760 L464 640 L254 735 L234 690 L439 520 Z" fill="url(#wing)"/>
+  <path d="M512 300 L548 520 L512 600 L476 520 Z" fill="#1a2234" opacity=".55"/>
+</svg>
